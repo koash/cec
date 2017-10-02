@@ -36,7 +36,7 @@ $ ./python.sh cec.py [FILE PATH or DIRECTORY]
 c.f. utf-16
 
 ```
-$ ./python.sh cec.py [FILE or DIR] --output-encoding utf_16 [FILE PATH or DIRECTORY]
+$ ./python.sh cec.py --output-encoding utf_16 [FILE PATH or DIRECTORY]
 ```
 
 ## Sample data
