@@ -1,6 +1,6 @@
 # CEC: Character Encoding Converter
 
-Convert file encoding to different encoding.
+Convert character encoding to different encoding.
 
 ## Installation
 
@@ -41,8 +41,8 @@ $ ./python.sh cec.py --output-encoding utf_16 [FILE PATH or DIRECTORY]
 
 ## Sample data
 
-- [Zip code data of Kanagawa Prefecture (**Shift_JIS**)](http://www.post.japanpost.jp/zipcode/dl/kogaki/zip/14kanaga.zip)
-    - [Zip code data in Japan](http://www.post.japanpost.jp/zipcode/dl/kogaki-zip.html)
+- [Pre-download zip code data of Kanagawa Prefecture (**Shift_JIS**)](http://www.post.japanpost.jp/zipcode/dl/kogaki/zip/14kanaga.zip)
+    - [Zip codes data of Japan](http://www.post.japanpost.jp/zipcode/dl/kogaki-zip.html)
 
 ## References
 
