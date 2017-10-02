@@ -22,14 +22,20 @@ $ docker build github.com/koash/cec
 
 ### Default to utf-8 
 
+Specify the file or directory to convert (Default to **utf-8**)
+
 ```
 $ ./python.sh cec.py [FILE PATH or DIRECTORY]
 ```
+
+Character encoding information of the read file.
 
 ```
 [File] data/14KANAGA.CSV	[Detector] {'confidence': 0.2862116573623867, 'encoding': 'SHIFT_JIS'}
 [File] data/a.txt	        [Detector] {'confidence': 1.0, 'encoding': 'ascii'}
 ```
+
+Converted files are output to result directory.
 
 ### Specify the output file encoding
 
