@@ -25,7 +25,7 @@ class CEC(object):
             input_encoding = self.check_encoding(file)
             df = pd.read_csv(file, delimiter=',', header='infer', encoding=input_encoding)
             filename, ext = splitext(basename(file))
-            df.to_csv("result/{0}_{1}.{2}".format(filename, options.output_encoding, ext), mode='w', index=False, header=True, encoding=options.output_encoding)
+            df.to_csv("result/{0}_{1}{2}".format(filename, options.output_encoding, ext), mode='w', index=False, header=True, encoding=options.output_encoding)
 
 class MultipleOption(Option):
     ACTIONS = Option.ACTIONS + ("extend",)
