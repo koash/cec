@@ -40,7 +40,7 @@ class MultipleOption(Option):
             Option.take_action(self, action, dest, opt, value, values, parser)
 
 def start():
-    parser = OptionParser(usage="usage: $ python cec.py [options]", option_class=MultipleOption)
+    parser = OptionParser(usage="usage: $ ./python.sh cec.py [options]", option_class=MultipleOption)
     parser.add_option("--output-encoding", default="utf_8", help="specify the output file encoding")
 
     options, args = parser.parse_args()
