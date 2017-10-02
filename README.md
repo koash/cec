@@ -35,7 +35,7 @@ Character encoding information of the read file.
 [File] data/a.txt	        [Detector] {'confidence': 1.0, 'encoding': 'ascii'}
 ```
 
-Converted files are output to result directory.
+Converted files are output to `result` directory.
 
 ### Specify the output file encoding
 
