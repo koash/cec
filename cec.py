@@ -15,7 +15,7 @@ class CEC(object):
                 if detector.done:
                     break
         detector.close()
-        print("[File] {0}\t[Detector] {1}".format(file, detector.result))
+        print("[File] {0}\t[Detects] {1}".format(file, detector.result))
         return detector.result['encoding']
 
     def convert(self, options, args):

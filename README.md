@@ -31,8 +31,8 @@ $ ./python.sh cec.py [FILE PATH or DIRECTORY]
 Character encoding information of the read file.
 
 ```
-[File] data/14KANAGA.CSV	[Detector] {'confidence': 0.2862116573623867, 'encoding': 'SHIFT_JIS'}
-[File] data/test.txt		[Detector] {'confidence': 1.0, 'encoding': 'ascii'}
+[File] data/14KANAGA.CSV	[Detects] {'confidence': 0.2862116573623867, 'encoding': 'SHIFT_JIS'}
+[File] data/test.txt		[Detects] {'confidence': 1.0, 'encoding': 'ascii'}
 ```
 
 Converted files are output to `result` directory.
