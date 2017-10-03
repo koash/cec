@@ -52,4 +52,5 @@ $ ./python.sh cec.py --output-encoding utf_16 [FILE PATH or DIRECTORY]
 
 ## References
 
+- [Chardet: The Universal Character Encoding Detector](https://github.com/chardet/chardet)
 - [Standard Encodings - Python](https://docs.python.org/2.7/library/codecs.html#standard-encodings)
