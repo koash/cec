@@ -20,7 +20,7 @@ $ docker build github.com/koash/cec
 
 ## Usage
 
-### Default to utf-8 
+### Default to UTF-8 
 
 Specify the file or directory to convert (Default to **utf-8**)
 
@@ -39,7 +39,7 @@ Converted files are output to `result` directory.
 
 ### Specify the output file encoding
 
-c.f. utf-16
+e.g., UTF-16
 
 ```
 $ ./python.sh cec.py --output-encoding utf_16 [FILE PATH or DIRECTORY]
