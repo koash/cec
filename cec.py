@@ -53,7 +53,7 @@ def start():
     parser.add_option("--header", default=-1, help="specify row number(s) to use as the column names, and the start of the data in input file."
                                                    "Default 'header = -1' has no header and reads the first line as data."
                                                    "header=0 denotes the first line of data rather than the first line of the file."
-                                                   "e.g, -1: no header, 0: first line, 1: second line")
+                                                   " e.g, -1: no header, 0: first line, 1: second line")
 
     options, args = parser.parse_args()
 
