@@ -23,7 +23,8 @@ class CEC(object):
         files = glob.glob(input_target.format(args))
         for file in files:
             input_encoding = self.check_encoding(file)
-            df = pd.read_csv(file, delimiter=options.input_delimiter, quotechar='\'', header='infer', encoding=options.input_encoding)
+            enc = input_encoding if options.input_encoding is None else options.input_encoding
+            df = pd.read_csv(file, delimiter=options.input_delimiter, quotechar='\'', header='infer', encoding=enc)
             print(df)
             filename, ext = splitext(basename(file))
             df.to_csv("result/{0}_{1}{2}".format(filename, options.output_encoding, ext), mode='w', sep=options.output_delimiter, quoting=3, index=False, header=True, encoding=options.output_encoding)
