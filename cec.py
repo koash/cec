@@ -23,7 +23,7 @@ class CEC(object):
         files = glob.glob(input_target.format(args))
         for file in files:
             input_encoding = self.check_encoding(file)
-            df = pd.read_csv(file, delimiter=',', header='infer', encoding=input_encoding)
+            df = pd.read_csv(file, delimiter=',', header='infer', encoding=options.input_encoding)
             filename, ext = splitext(basename(file))
             df.to_csv("result/{0}_{1}{2}".format(filename, options.output_encoding, ext), mode='w', index=False, header=True, encoding=options.output_encoding)
 
@@ -41,6 +41,7 @@ class MultipleOption(Option):
 
 def start():
     parser = OptionParser(usage="usage: $ ./python.sh cec.py [options]", option_class=MultipleOption)
+    parser.add_option("--input-encoding", default=None, help="specify the input file encoding")
     parser.add_option("--output-encoding", default="utf_8", help="specify the output file encoding")
 
     options, args = parser.parse_args()
