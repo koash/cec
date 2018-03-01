@@ -49,20 +49,25 @@ $ ./python.sh cec.py --output-encoding utf_16 [FILE PATH or DIRECTORY] --input-d
 
 ```
   -h, --help            show this help message and exit
+  
   --input-encoding=INPUT_ENCODING
                         specify the input file encoding
+  
   --output-encoding=OUTPUT_ENCODING
-                        specify the output file encoding
+                        specify the output file encoding. Default is 'utf_8'
+  
   --input-delimiter=INPUT_DELIMITER
-                        specify the output file delimiter
+                        specify the output file delimiter. Default is 'TAB(\t)'
+  
   --output-delimiter=OUTPUT_DELIMITER
-                        specify the output file delimiter
+                        specify the output file delimiter. Default is 'TAB(\t)'
+  
   --header=HEADER       specify row number(s) to use as the column names, and
-                        the start of the data in input file.Default 'header =
+                        the start of the data in input file.Default 'header=
                         -1' has no header and reads the first line as
                         data.header=0 denotes the first line of data rather
-                        than the first line of the file. e.g, -1: no header,
-                        0: first line, 1: second line
+                        than the first line of the file.
+                        e.g, -1: no header, 0: first line, 1: second line
 ```
 
 ## Sample data

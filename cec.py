@@ -47,11 +47,11 @@ class MultipleOption(Option):
 def start():
     parser = OptionParser(usage="usage: $ ./python.sh cec.py [options]", option_class=MultipleOption)
     parser.add_option("--input-encoding", default=None, help="specify the input file encoding")
-    parser.add_option("--output-encoding", default="utf_8", help="specify the output file encoding")
-    parser.add_option("--input-delimiter", default="\t", help="specify the output file delimiter")
-    parser.add_option("--output-delimiter", default="\t", help="specify the output file delimiter")
+    parser.add_option("--output-encoding", default="utf_8", help="specify the output file encoding. Default is 'utf_8'")
+    parser.add_option("--input-delimiter", default="\t", help="specify the output file delimiter. Default is 'TAB'.")
+    parser.add_option("--output-delimiter", default="\t", help="specify the output file delimiter. Default is 'TAB'.")
     parser.add_option("--header", default=-1, help="specify row number(s) to use as the column names, and the start of the data in input file."
-                                                   "Default 'header = -1' has no header and reads the first line as data."
+                                                   "Default 'header=-1' has no header and reads the first line as data."
                                                    "header=0 denotes the first line of data rather than the first line of the file."
                                                    " e.g, -1: no header, 0: first line, 1: second line")
 
