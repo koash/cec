@@ -45,6 +45,20 @@ e.g., UTF-16
 $ ./python.sh cec.py --output-encoding utf_16 [FILE PATH or DIRECTORY]
 ```
 
+### Options
+
+```
+  -h, --help            show this help message and exit
+  --input-encoding=INPUT_ENCODING
+                        specify the input file encoding
+  --output-encoding=OUTPUT_ENCODING
+                        specify the output file encoding
+  --input-delimiter=INPUT_DELIMITER
+                        specify the output file delimiter
+  --output-delimiter=OUTPUT_DELIMITER
+                        specify the output file delimiter
+```
+
 ## Sample data
 
 - [Pre-download zip code data of Kanagawa Prefecture (**Shift_JIS**)](http://www.post.japanpost.jp/zipcode/dl/kogaki/zip/14kanaga.zip)
