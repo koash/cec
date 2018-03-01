@@ -62,11 +62,9 @@ $ ./python.sh cec.py --output-encoding utf_16 [FILE PATH or DIRECTORY] --input-d
   --output-delimiter=OUTPUT_DELIMITER
                         specify the output file delimiter. Default is 'TAB(\t)'
   
-  --header=HEADER       specify row number(s) to use as the column names, and
-                        the start of the data in input file.Default 'header=
-                        -1' has no header and reads the first line as
-                        data.header=0 denotes the first line of data rather
-                        than the first line of the file.
+  --header=HEADER       specify row number(s) to use as the column names, and the start of the data in input file.
+                        Default 'header=-1' has no header and reads the first line as data.
+                        header=0 denotes the first line of data rather than the first line of the file.
                         e.g, -1: no header, 0: first line, 1: second line
 ```
 
