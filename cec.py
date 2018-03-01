@@ -18,16 +18,20 @@ class CEC(object):
         print("[File] {0}\t[Detects] {1}".format(file, detector.result))
         return detector.result['encoding']
 
+    def output_header(self, header):
+        return False if header == -1 else True
+
     def convert(self, options, args):
         input_target = '{0}/*' if isdir(args) else '{0}'
         files = glob.glob(input_target.format(args))
         for file in files:
             input_encoding = self.check_encoding(file)
             enc = input_encoding if options.input_encoding is None else options.input_encoding
-            df = pd.read_csv(file, delimiter=options.input_delimiter, quotechar='\'', header='infer', encoding=enc)
+            header = int(options.header)
+            df = pd.read_csv(file, delimiter=options.input_delimiter, quotechar='\'', header=int(options.header), encoding=enc)
             print(df)
             filename, ext = splitext(basename(file))
-            df.to_csv("result/{0}_{1}{2}".format(filename, options.output_encoding, ext), mode='w', sep=options.output_delimiter, quoting=3, index=False, header=True, encoding=options.output_encoding)
+            df.to_csv("result/{0}_{1}{2}".format(filename, options.output_encoding, ext), mode='w', sep=options.output_delimiter, quoting=3, index=False, header=self.output_header(header), encoding=options.output_encoding)
 
 class MultipleOption(Option):
     ACTIONS = Option.ACTIONS + ("extend",)
@@ -47,6 +51,10 @@ def start():
     parser.add_option("--output-encoding", default="utf_8", help="specify the output file encoding")
     parser.add_option("--input-delimiter", default="\t", help="specify the output file delimiter")
     parser.add_option("--output-delimiter", default="\t", help="specify the output file delimiter")
+    parser.add_option("--header", default=-1, help="specify row number(s) to use as the column names, and the start of the data in input file."
+                                                   "Default 'header = -1' has no header and reads the first line as data."
+                                                   "header=0 denotes the first line of data rather than the first line of the file."
+                                                   "e.g, -1: no header, 0: first line, 1: second line")
 
     options, args = parser.parse_args()
 
