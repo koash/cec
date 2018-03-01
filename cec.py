@@ -28,7 +28,7 @@ class CEC(object):
             input_encoding = self.check_encoding(file)
             enc = input_encoding if options.input_encoding is None else options.input_encoding
             header = int(options.header)
-            df = pd.read_csv(file, delimiter=options.input_delimiter, quotechar='\'', header=int(options.header), encoding=enc)
+            df = pd.read_csv(file, delimiter=options.input_delimiter, quotechar='\'', header=header, encoding=enc)
             filename, ext = splitext(basename(file))
             df.to_csv("result/{0}_{1}{2}".format(filename, options.output_encoding, ext), mode='w', sep=options.output_delimiter, quoting=3, index=False, header=self.output_header(header), encoding=options.output_encoding)
 
